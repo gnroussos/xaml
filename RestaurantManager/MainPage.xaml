@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="RestaurantManager.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RestaurantManager"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="DimGray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="325*"/>
+            <RowDefinition Height="107*"/>
+            <RowDefinition Height="108*"/>
+            <RowDefinition Height="540*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="0.5*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="textTitle" Style="{StaticResource BasicTextBlockStyle}" HorizontalAlignment="Center" TextWrapping="Wrap" Text=" Restaurant Manager" 
+                   VerticalAlignment="Top" FontSize="52" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="2" />
+        <TextBlock x:Name="textTitle2" Style="{StaticResource BasicTextBlockStyle}" Grid.Row="2" Grid.ColumnSpan="2" Text="Internal Test Version" 
+                   TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        <Button x:Name="ViewOrders" HorizontalAlignment="Center" Grid.Row="3" Content="Go to Orders View" 
+                FontSize="40" Foreground="BlanchedAlmond" VerticalAlignment="Center" Click="ViewOrders_Click">
+         </Button>
+        <Button x:Name="SubmitOrder" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="1" 
+                   Content="Submit Order" FontSize="40" Foreground="BlanchedAlmond" VerticalAlignment="Center" Click="SubmitOrder_Click"/>
+    </Grid>
+</Page>
+
+   

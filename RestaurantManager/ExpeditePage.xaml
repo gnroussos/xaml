@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="RestaurantManager.ExpeditePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RestaurantManager"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:models="using:RestaurantManager"
+    mc:Ignorable="d">
+
+    <Grid Background="DimGray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="265*"/>
+            <RowDefinition Height="221*"/>
+            <RowDefinition Height="54*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="ClearOrders" Style="{StaticResource BasicButtonStyle}" HorizontalAlignment="Center" Grid.Row="2" 
+                Content="Clear All Orders" VerticalAlignment="Center" FontSize="42" Click="ClearOrders_Click" />
+        <GridView x:Name="gridView" Grid.Row="0" Grid.Column="0" ItemsSource="{Binding OrderItems}"
+                  Margin="10,100,0,0" Header="Your Order"/>
+        <AppBar x:Name="appBar">
+            <AppBarButton x:Name="appBarHomeButton" HorizontalAlignment="Left" Icon="Home" Label="Home" 
+                          VerticalAlignment="Top" Click="appBarHomeButton_Click"/>
+        </AppBar>
+    </Grid>
+
+</Page>
